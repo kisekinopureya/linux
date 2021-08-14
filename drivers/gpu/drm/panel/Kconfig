@@ -287,6 +287,16 @@ config DRM_PANEL_NOVATEK_NT39016
 	  Say Y here if you want to enable support for the panels built
 	  around the Novatek NT39016 display controller.
 
+config DRM_PANEL_CSOT_NT36672
+        tristate "CSOT panel with Novatek NT36672"
+        depends on OF
+        depends on DRM_MIPI_DSI
+        depends on BACKLIGHT_CLASS_DEVICE
+        help
+          Say Y here if you want to enable support for the CSOT
+          NT36672 panel (found on Xiaomi Redmi Note 5 / 5 Plus).
+
+
 config DRM_PANEL_MANTIX_MLAF057WE51
 	tristate "Mantix MLAF057WE51-X MIPI-DSI LCD panel"
 	depends on OF
